@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEFM Presidente Costa e Silva - Plataforma Educacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #4299e1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .platform-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .course-badge {
+            background-color: rgba(66, 153, 225, 0.1);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-auto" src="https://via.placeholder.com/50x50" alt="Logo da Escola">
+                        <span class="ml-3 text-xl font-bold text-gray-900">EEEFM Presidente Costa e Silva</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-6">
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Início</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Cursos</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Calendário</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Plataformas</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 font-medium">Contato</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 shadow-sm">
+                        Área do Aluno
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-20 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                    Excelência Educacional Digital
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-xl opacity-90">
+                    Conectando nossos alunos às melhores oportunidades de aprendizagem online
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#plataformas" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-800 bg-white hover:bg-gray-50 transition duration-300">
+                        <i class="fas fa-laptop-code mr-2"></i> Plataformas Gratuitas
+                    </a>
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-700 hover:bg-blue-800 transition duration-300">
+                        <i class="fas fa-user-graduate mr-2"></i> Acesso ao Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Cards -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Acessos Rápidos</h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-50 p-3 rounded-lg">
+                            <i class="fas fa-book-open text-blue-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Biblioteca Digital</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500 text-sm">
+                        Acesso ao acervo digital com materiais de estudo, livros e artigos acadêmicos.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Acessar <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-green-50 p-3 rounded-lg">
+                            <i class="fas fa-calendar-check text-green-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Calendário Acadêmico</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500 text-sm">
+                        Datas importantes, eventos e feriados do ano letivo atualizado.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Acessar <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-purple-50 p-3 rounded-lg">
+                            <i class="fas fa-chalkboard-teacher text-purple-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Ambiente Virtual</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500 text-sm">
+                        Plataforma de aprendizagem com materiais e atividades dos cursos.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-medium flex items-center">
+                            Acessar <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-yellow-50 p-3 rounded-lg">
+                            <i class="fas fa-file-certificate text-yellow-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Documentos Escolares</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500 text-sm">
+                        Boletins, históricos e declarações disponíveis digitalmente.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium flex items-center">
+                            Acessar <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Courses Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Nossos Cursos Técnicos</h2>
+                <p class="max-w-2xl mx-auto text-gray-500">
+                    Formação profissional integrada ao ensino médio com excelência acadêmica
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 hover:shadow-md">
+                    <div class="h-48 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-code text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-900">Informática</h3>
+                            <span class="course-badge px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-clock mr-1"></i> 1200h
+                            </span>
+                        </div>
+                        <p class="mt-3 text-gray-500 text-sm">
+                            Desenvolvimento de sistemas, redes de computadores e manutenção de hardware.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center">
+                                Detalhes do curso <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 hover:shadow-md">
+                    <div class="h-48 bg-gradient-to-r from-green-600 to-green-800 flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-900">Nutrição e Dietética</h3>
+                            <span class="course-badge px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-clock mr-1"></i> 1000h
+                            </span>
+                        </div>
+                        <p class="mt-3 text-gray-500 text-sm">
+                            Planejamento alimentar, controle de qualidade e segurança alimentar.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium text-sm flex items-center">
+                                Detalhes do curso <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 hover:shadow-md">
+                    <div class="h-48 bg-gradient-to-r from-purple-600 to-purple-800 flex items-center justify-center">
+                        <i class="fas fa-user-nurse text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-900">Enfermagem</h3>
+                            <span class="course-badge px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-clock mr-1"></i> 1500h
+                            </span>
+                        </div>
+                        <p class="mt-3 text-gray-500 text-sm">
+                            Cuidados básicos de enfermagem, primeiros socorros e saúde coletiva.
+                        </p>
+                        <div class="mt-6">
+                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium text-sm flex items-center">
+                                Detalhes do curso <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                    Conheça todos os cursos <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Platforms Section -->
+    <div id="plataformas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Plataformas de Cursos Gratuitos</h2>
+            <p class="max-w-2xl mx-auto text-gray-500">
+                Parcerias e indicações de plataformas reconhecidas para complementar sua formação
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-8">
+            <!-- FGV -->
+            <div class="platform-card bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/150x60?text=FGV" alt="Logo FGV">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">FGV - Fundação Getúlio Vargas</h3>
+                            <p class="text-gray-600 mb-4">
+                                Instituição premiada e membro do Open Education Consortium, oferece conteúdos e materiais didáticos online sem custo em diversas áreas do conhecimento.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-graduation-cap mr-1"></i> Cursos com certificado
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-globe mr-1"></i> Reconhecimento internacional
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                                Acessar Plataforma <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Escola Virtual Bradesco -->
+            <div class="platform-card bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/150x60?text=Bradesco" alt="Logo Bradesco">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Escola Virtual - Fundação Bradesco</h3>
+                            <p class="text-gray-600 mb-4">
+                                Oferece cursos online gratuitos em Administração, Informática, Desenvolvimento Pessoal e Profissional com ambiente virtual completo que respeita a individualidade de cada aluno.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-laptop mr-1"></i> Plataforma intuitiva
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-certificate mr-1"></i> Certificação gratuita
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 transition duration-300">
+                                Acessar Plataforma <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SENAI/SESI -->
+            <div class="platform-card bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/150x60?text=SENAI" alt="Logo SENAI">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">SENAI/SESI</h3>
+                            <p class="text-gray-600 mb-4">
+                                Reconhecidos nacionalmente pela excelência em Educação Profissional, oferecem cursos online com duração de 10 a 32 horas e certificado após conclusão, ideais para quem deseja aperfeiçoar-se para o mercado de trabalho.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-briefcase mr-1"></i> Foco no mercado
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-industry mr-1"></i> Setor industrial
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 transition duration-300">
+                                Acessar Plataforma <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Prime Cursos -->
+            <div class="platform-card bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/150x60?text=Prime+Cursos" alt="Logo Prime Cursos">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Prime Cursos</h3>
+                            <p class="text-gray-600 mb-4">
+                                Plataforma com mais de 200 cursos gratuitos em diversas áreas profissionais como Administração, Educação, Idiomas, Informática, Moda e preparatórios para ENEM e Concursos Públicos. Certificado disponível mediante taxa.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-book-open mr-1"></i> Variedade de cursos
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-gem mr-1"></i> Cursos profissionalizantes
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-300">
+                                Acessar Plataforma <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Help Button -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button class="floating-btn bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 transition duration-300">
+            <i class="fas fa-question text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">EEEFM Presidente Costa e Silva</h3>
+                    <p class="text-gray-400 text-sm">
+                        Educação de qualidade formando cidadãos para o futuro no estado do Pará.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Portal do Aluno</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Biblioteca Digital</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Calendário Escolar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Documentos Escolares</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Cursos</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Ensino Médio Regular</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Técnico em Informática</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Técnico em Enfermagem</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Técnico em Nutrição</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <address class="not-italic text-gray-400 text-sm">
+                        <p class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal, 1234 - Bairro Centro</p>
+                        <p class="mt-2 flex items-center"><i class="fas fa-phone-alt mr-2"></i> (91) 1234-5678</p>
+                        <p class="mt-2 flex items-center"><i class="fas fa-envelope mr-2"></i> contato@escolacostaesilva.edu.br</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-xs">
+                    &copy; 2023 EEEFM Presidente Costa e Silva. Todos os direitos reservados.
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-xs mr-4 transition duration-300">Termos de Uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-xs transition duration-300">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+            // In a real implementation, you would toggle a mobile menu here
+            mobileMenuButton.addEventListener('click', function() {
+                alert('Menu mobile seria aberto aqui em uma implementação completa');
+            });
+            
+            // Floating button interaction
+            const floatingBtn = document.querySelector('.floating-btn');
+            floatingBtn.addEventListener('click', function() {
+                alert('Central de Ajuda - Como podemos te ajudar?');
+            });
+        });
+    </script>
+</body>
+</html>

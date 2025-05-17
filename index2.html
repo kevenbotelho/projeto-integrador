@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=import_contacts" />
     <title>Document</title>
     <style>
         *{
@@ -15,14 +16,32 @@
             border: none;
             font-family: "Poppins";
         }
-        header , main , footer{
+        body{
+            background-color: #f8fafc;
+        }
+        main {
             max-width: 1280px;
             margin: auto;
         }
         header{
+            background-color: #f8fafc;
+            color: black;
             display: flex;
-        }
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
 
+            width: 100vw;
+            padding: 10px 0;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        header nav ul li{
+            display: inline-block;
+            margin: 10px;
+        }
 
         section#inicio{
             background-color: #203f69;
@@ -86,12 +105,84 @@
         }
         main section#acessos-rapidos h2{
             font-size: 30px;
-            padding-bottom: 20px;
+            padding-bottom: 20px; 
         }
         main section#acessos-rapidos div#acessos-rapidos-div{
-            background-color: red;
+            background-color: #ffffff;
             display: flex;
             flex-flow: row nowwrap;
+        }
+        main section#acessos-rapidos div#acessos-rapidos-div div.item-acesso-rapido{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 20px;
+        }
+        main section#acessos-rapidos div#acessos-rapidos-div div.item-acesso-rapido h3{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        main section#acessos-rapidos div#acessos-rapidos-div div.item-acesso-rapido h3 span.material-symbols-outlined{
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid ;
+
+            padding: 10px;
+            margin-right: 3px;
+
+            font-size: 30px;
+        }
+        main section#acessos-rapidos div#acessos-rapidos-div div.item-acesso-rapido p{
+            text-align: left;
+        }
+
+
+
+
+
+
+        main section#cursos-tecnicos{
+            border: 1px solid;
+            padding: 30px;
+        }
+        main section#cursos-tecnicos h2{
+            text-align: center;
+        }
+        main section#cursos-tecnicos div#cursos-tecnicos-div{
+            display: flex;
+            border: 1px solid;
+        }
+        main section#cursos-tecnicos button{
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+
+
+
+
+
+        main section#cursos-gratuitos{
+
+        }
+        main section#cursos-gratuitos div#plataformas{
+            display: flex;
+        }
+        main section#cursos-gratuitos div#plataformas div.item-plataforma{
+            background-color: red;
+            padding: 70px;
+            height: 1000px;
+        }
+
+
+        footer{
+            height: 500px;
+            background-color: black;
         }
     </style>
 </head>
@@ -99,6 +190,7 @@
     <header>
         <div id="logo">
             <img src="" alt="">
+            <p>logo da escola</p>
         </div>
         <h1>EEEFM Presidente Costa e Silva</h1>
         <nav>
@@ -127,22 +219,30 @@
             <h2>Acessos Rápidos</h2>
             <div id="acessos-rapidos-div">
                 <div class="item-acesso-rapido">
-                    <h3>Biblioteca Digital</h3>
+                    <h3><span class="material-symbols-outlined">
+                        import_contacts
+                        </span>Biblioteca Digital</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem velit ipsam vitae accusamus earum cum. Repellat, inventore.</p>
                     <p>Acessar -></p>
                 </div>
                 <div class="item-acesso-rapido">
-                    <h3>Calendário Acadêmico</h3>
+                    <h3><span class="material-symbols-outlined">
+                        import_contacts
+                        </span>Biblioteca Digital</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem velit ipsam vitae accusamus earum cum. Repellat, inventore.</p>
                     <p>Acessar -></p>
                 </div>
                 <div class="item-acesso-rapido">
-                    <h3>Ambiente Virtual</h3>
+                    <h3><span class="material-symbols-outlined">
+                        import_contacts
+                        </span>Biblioteca Digital</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem velit ipsam vitae accusamus earum cum. Repellat, inventore.</p>
                     <p>Acessar -></p>
                 </div>
                 <div class="item-acesso-rapido">
-                    <h3>Documentos Escolares</h3>
+                    <h3><span class="material-symbols-outlined">
+                        import_contacts
+                        </span>Biblioteca Digital</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem velit ipsam vitae accusamus earum cum. Repellat, inventore.</p>
                     <p>Acessar -></p>
                 </div>
@@ -181,14 +281,32 @@
                     </div>
                 </div>
             </div>
+            <button>Conheça todos os cursos</button>
         </section>
 
 
 
 
         <section id="cursos-gratuitos">
-
+            <h2>Plataformas de Cursos Gratuitos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus earum porro recusandae animi reprehenderi.</p>
+            <div id="plataformas">
+                <div class="item-plataforma">
+                    FGV - Fundação Getúlio Vargas
+                </div>
+                <div class="item-plataforma">
+                    Escola Virtual - Fundação Bradesco
+                </div>
+                <div class="item-plataforma">
+                    SENAI/SESI
+                </div>
+                <div class="item-plataforma">
+                    Prime Cursos
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer></footer>
 </body>
 </html>
